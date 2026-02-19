@@ -1,6 +1,8 @@
 <template>
   <div>
+    <LayoutsSiteHeader />
     <slot />
+    <LayoutsAppFooter />
   </div>
 </template>
 

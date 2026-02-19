@@ -4,7 +4,7 @@ import { clearError } from "#app";
 const props = defineProps({
   error: Object,
 });
-
+console.error("Error component received error:", props.error);
 const goHome = async () => {
   await clearError({ redirect: "/" });
 };
@@ -18,7 +18,7 @@ const reloadPage = () => {
   <div class="errorbody">
     <div class="error-container">
       <div class="error-code">
-        {{ error || 500 }}
+        {{ error.errorCode || 500 }}
       </div>
 
       <h1>Oops! Something went wrong</h1>
